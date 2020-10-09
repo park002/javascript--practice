@@ -14,7 +14,7 @@ const superSexyHandler = {
     windowEvent: () => {
         window.addEventListener('resize', event => {
             span.style.color = 'white';
-            let width = `${event.target.innerWidth}`;
+            let width = event.target.innerWidth;
             if (width < MIN) {
                 body.style.backgroundColor = colors[2];
             }
