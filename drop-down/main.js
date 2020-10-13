@@ -3,23 +3,20 @@ const menuListItem = document.querySelector('#js-menuListItem'),
     form = menuListItem.querySelector('#js-form');
 const main = document.querySelector('#main');
 
-
+function showAndHide() {
+    search.style.visibility = `hidden`;
+    form.style.visibility = 'visible';
+}
 function onSearch() {
-    menuListItem.addEventListener('click', event => {
-        form.classList.toggle('active'); //클릭 했다면 액티브 상태로만들자
-        if (form.classList.contains('active')) { //있음
-            search.style.visibility = `hidden`;
-            form.style.visibility = 'visible';
-        }
-        else {
-            search.style.visibility = `hidden`;
-        }
+    //menuListItem.active = false; //객체의 프로퍼티를 동적으로 설정.
+    menuListItem.addEventListener('click', function () {
+        showAndHide();
     })
 }
+
 main.addEventListener('click', () => {
-   
     search.style.visibility = `visible`;
-    form.style.visibility = 'hidden'; 
+    form.style.visibility = 'hidden';
 });
 function init() {
     onSearch();

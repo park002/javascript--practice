@@ -47,10 +47,8 @@ main{
     display: flex;
     text-align: center;
     align-items: center;
-    border-left: 1px solid black;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
     font-weight: 600;
+    border-bottom: 1px solid black;
 }
 .menu__list-item{
     cursor: pointer;
@@ -76,10 +74,54 @@ main{
     position: absolute;
     visibility: hidden;
 }
-
-.currency__lists{
-    position: absolute;
+.menu__list-item:nth-child(3){
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 19px 0;
+    transition:border-bottom 1s ease-in-out;
 }
+.menu__list-item:nth-child(3):hover{
+    border-bottom: none;
+}
+.currency__lists{
+    visibility: visible;
+    margin: 19px 0;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    right: 1px;
+    flex-direction: column;
+    position: absolute;
+    text-transform: uppercase;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 250ms ease-in-out;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+    border-bottom: 1px black solid;
+}
+ .menu__list-item:nth-child(3):hover .currency__lists{
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+} 
+.currency__list-item:hover{
+    color:rgba(0, 0, 0, 0.5)
+}
+.currency__list-item{
+    margin-top:18px;
+}
+.menu__list-item:last-child{
+    transition: all 1s linear;
+}
+.menu__list-item:last-child:hover{
+    opacity: 0;
+    transform: translateX(-40%);
+}
+
+
+
+
 
 
 
