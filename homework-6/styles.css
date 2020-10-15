@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+input,
+button{
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+button{
+    border-radius: 10px;
+    padding: 15px 40px;
+}
+div:not(:last-child){
+    margin-bottom: 5px;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.operator{
+    background-color: #FE8E00;
+    color: white;
+}
+.cal{
+    text-align: center;
+}
+.number__btn{
+ background-color: #363439;
+ color: white;   
+}
+div:last-child .number__btn{
+    padding: 15px 87px;
+}
+.cal__reset-btn{
+    background-color: #A7AAB1;
+    color: white;
+    
+}
+.cal__input{
+    font-size: 20px;
+    font-weight: 600;
+    text-align: right;
+    background: transparent;
+    color: white;
+    margin-right: 5px;
+}
