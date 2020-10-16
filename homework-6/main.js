@@ -5,7 +5,7 @@ const operatorBtn = ['+', '-', '*', '/'];
 const RESET = 'C';
 const EQUAL_BTN = '=';
 let numArray = [];
-let OPERATOR;
+let OPERATOR = [];
 let getArg = [];
 
 function paintText(text) {
@@ -52,18 +52,18 @@ function getValue() {
             return;
         }
         if (value !== EQUAL_BTN) { //연산자 버튼 클릭 시
+            getArg.push(input.value);
+            initArray();
+            OPERATOR.push(searchOpeator(value));
             if (value === RESET) {
                 initArray();
                 paintText(0);
                 return;
             }
-            getArg.push(input.value);
-            initArray();
-            OPERATOR = searchOpeator(value);
         }
         else { // 이콜버튼 
             getArg.push(input.value);
-            mathOperation(OPERATOR);
+            mathOperation(OPERATOR.forEach(item=>item));
         };
     });
 }

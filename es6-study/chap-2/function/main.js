@@ -1,4 +1,7 @@
-const names = ['jaeho', 'ddd', 'qqq'];
+const emails = ['jaeho@naver.com', 'jaeho@gmail.com', 'jaeho@daum.com', 'hoya@gmail.com', 'nco@no.com'];
 
-const array = names.map(item => item + "❤");
-console.log(array);
+const cleaned = emails.map((email,index) => ({
+    username: email.split('@')[0],
+    index
+}));
+console.table(cleaned);
