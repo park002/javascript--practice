@@ -70,7 +70,7 @@ function handleEqualsClick() {
         calculate();
     }
 }
-numbers.forEach(function(number) {
+numbers.forEach(function (number) {
     number.addEventListener("click", handleNumberClick);
 });
 operations.forEach(function (operation) {
