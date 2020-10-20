@@ -9,4 +9,6 @@ const settings = {
         theme: 'dark'
     }
 };
-const 
+const { notification: {
+    follow
+} } = settings;
