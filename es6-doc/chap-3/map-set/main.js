@@ -1,8 +1,13 @@
 let john = { name: "John" };
+let map = new Map();
+map.set(john, "...");
 
-let visitsCountObj = {}; // 객체를 하나 만듭니다.
+john = null; // 참조를 null로 덮어씀
 
-visitsCountObj[john] = 123; // 객체(john)를 키로 해서 객체에 값(123)을 저장해봅시다.
+// john을 나타내는 객체는 맵 안에 저장되어있습니다.
+// map.keys()를 이용하면 해당 객체를 얻는 것도 가능합니다.
+for (let obj of map.keys()) {
+    alert(JSON.stringify(obj));
+}
 
-// 원하는 값(123)을 얻으려면 아래와 같이 키가 들어갈 자리에 `object Object`를 써줘야합니다.
-alert(visitsCountObj["[object Object]"]); // 123
+alert(map.size);
