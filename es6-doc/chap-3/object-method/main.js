@@ -4,4 +4,4 @@ let user = {
 };
 const count = userObj => Object.values(userObj).length;
 
-alert(count(user)); // 2
+alert(count(user)); // 2 

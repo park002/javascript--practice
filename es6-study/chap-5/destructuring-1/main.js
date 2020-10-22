@@ -1,14 +1,7 @@
-'use strict';
 const settings = {
-    notification: {
-        follow: true,
-        alerts: true,
-        unfollow: false
-    },
     color: {
         theme: 'dark'
     }
 };
-const { notification: {
-    follow
-} } = settings;
+const { notifications: { follow = 'potato' } = {} } = settings;
+console.log(follow);
